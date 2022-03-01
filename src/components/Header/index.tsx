@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { 
   Container, 
   Content, 
@@ -8,12 +7,18 @@ import {
 
 import logoImg from '../../assets/logo.svg';
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  onOpenNewTransactionModal: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onOpenNewTransactionModal}) => {
   return (
     <Container>
       <Content>
         <img src={logoImg} alt='Dt Money' />
-        <Button type='button'>Nova transação</Button>
+        <Button type='button' onClick={onOpenNewTransactionModal}>
+          Nova transação
+        </Button>
       </Content>
     </Container>
   );
