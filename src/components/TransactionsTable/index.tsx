@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import { api } from '../../services/api';
 
 import { Container, Table } from './styles';
 
+interface Transaction {
+  id: number;
+  title: string;
+  amount: number;
+  type: 'deposit' | 'withdraw';
+  category: string;
+  createdAt: string;
+}
+
 export const TransactionsTable: React.FC = () => {
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
+
+  useEffect(() => {
+    api('transactions')
+      .then(response => setTransactions(response.data))
+  }, []);
+
   return (
     <Container>
       <Table>
@@ -16,27 +34,17 @@ export const TransactionsTable: React.FC = () => {
         </thead>
 
         <tbody>
-           <tr>
-            <td>Desenvolvimento de site</td>
-            <td className="deposit">R$ 12.000</td>
-            <td>Venda</td>
-            <td>01/03/2022</td>
-          </tr>
-
-          <tr>
-            <td>Aluguel</td>
-            <td className="withdraw">- R$ 1.000</td>
-            <td>Casa</td>
-            <td>01/03/2022</td>
-          </tr>
-
-          <tr>
-            <td>Desenvolvimento de site</td>
-            <td className="deposit">R$ 12.000</td>
-            <td>Venda</td>
-            <td>01/03/2022</td>
-          </tr>
-
+          {transactions.map(transaction => (
+            <tr key={transaction.id}>
+              <td>{transaction.title}</td>
+              <td className={transaction.type}>
+                {transaction.type === 'withdraw' && '-'}
+                R$ {transaction.amount}
+              </td>
+              <td>{transaction.category}</td>
+              <td>{transaction.createdAt}</td>
+            </tr>
+          ))}
         </tbody>
       </Table>
     </Container>
