@@ -17,8 +17,8 @@ export const TransactionsTable: React.FC = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
 
   useEffect(() => {
-    api('transactions')
-      .then(response => setTransactions(response.data))
+    api.get('transactions')
+      .then(response => setTransactions(response.data.transactions))
   }, []);
 
   return (
@@ -39,10 +39,15 @@ export const TransactionsTable: React.FC = () => {
               <td>{transaction.title}</td>
               <td className={transaction.type}>
                 {transaction.type === 'withdraw' && '-'}
-                R$ {transaction.amount}
+                {new Intl.NumberFormat('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL'
+                }).format(transaction.amount)}
               </td>
               <td>{transaction.category}</td>
-              <td>{transaction.createdAt}</td>
+              <td>{new Intl.DateTimeFormat('pt-BR').format(
+                new Date(transaction.createdAt)
+              )}</td>
             </tr>
           ))}
         </tbody>

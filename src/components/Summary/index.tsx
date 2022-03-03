@@ -17,7 +17,7 @@ export const Summary: React.FC = () => {
           <p>Entradas</p>
           <img src={incomeImg} alt="Entradas" />
         </header>
-        <strong>R$ 17.400,00</strong>
+        <strong>R$ 0,00</strong>
       </Card>
 
       <Card>
@@ -25,7 +25,7 @@ export const Summary: React.FC = () => {
           <p>Saídas</p>
           <img src={outcomeImg} alt="Saídas" />
         </header>
-        <strong>- R$ 1.259,00</strong>
+        <strong>- R$ 0,00</strong>
       </Card>
 
       <Card className="highlight-background">
@@ -33,7 +33,7 @@ export const Summary: React.FC = () => {
           <p>Total</p>
           <img src={totalImg} alt="Total" />
         </header>
-        <strong>R$ 16.041,00</strong>
+        <strong>R$ 0,00</strong>
       </Card>
     </Container>
   );
