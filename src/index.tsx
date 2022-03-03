@@ -12,7 +12,7 @@ createServer({
         {
           id: 1,
           title: 'Desenvolvimento Web',
-          amount: 12.000,
+          amount: 12000,
           type: 'deposit',
           category: 'Freelancer',
           createdAt: new Date()
@@ -20,9 +20,17 @@ createServer({
         {
           id: 2,
           title: 'Aluguel',
-          amount: 2.000,
+          amount: 2000,
           type: 'withdraw',
           category: 'Casa',
+          createdAt: new Date()
+        },
+        {
+          id: 3,
+          title: 'Compras do mês',
+          amount: 1000,
+          type: 'withdraw',
+          category: 'Supermercado',
           createdAt: new Date()
         }
       ]
