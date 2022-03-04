@@ -5,6 +5,17 @@ export const Container = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: -8rem;
+
+
+  @media(max-width: 769px) {
+    overflow-x: scroll;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+
+    ::-webkit-scrollbar {
+      height: 0;
+      background: transparent;
+    }
 `;
 
 export const Card = styled.div`
@@ -35,6 +46,11 @@ export const Card = styled.div`
      &.highlight-background-green {
       background: var(--green);
       color: #FFF;
+    }
+
+    @media(max-width: 769px) {
+      width: 260px;
+      padding: 2rem 2rem;
     }
 
 `;

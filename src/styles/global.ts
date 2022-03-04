@@ -65,6 +65,10 @@ export const GlobalStyle = createGlobalStyle`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media(max-width: 769px) {
+      align-items: flex-end;
+    }
   }
 
   .react-modal-content {
@@ -73,7 +77,12 @@ export const GlobalStyle = createGlobalStyle`
     background: var(--background);
     padding: 3rem;
     position: relative;
-    border-radius: 5px;    
+    border-radius: 5px;
+    
+     @media(max-width: 769px) {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
   }
 
   .react-modal-close {

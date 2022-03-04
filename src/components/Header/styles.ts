@@ -9,8 +9,15 @@ export const Content = styled.div`
   margin: 0 auto;
   padding: 2rem 1rem 10rem;
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
+
+ @media(max-width: 769px) {
+  img {
+    width: 140px;
+    margin-right: 10px;
+  }
+ }
 `;
 
 export const Button = styled.button`
@@ -25,5 +32,9 @@ export const Button = styled.button`
 
   &:hover {
     filter: brightness(0.9);
+  }
+
+  @media(max-width: 769px) {
+   padding: 0 1rem;
   }
 `;
