@@ -1,15 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import { Container, Card } from './styles';
 
-import { TransactionsContext } from '../../contexts/TransactionsContext';
+import { useTransactions } from '../../hooks/useTransactions';
 
 import incomeImg from '../../assets/income.svg';
 import outcomeImg from '../../assets/outcome.svg';
 import totalImg from '../../assets/total.svg';
 
 export const Summary: React.FC = () => {
-  const { transactions } = useContext(TransactionsContext);
+  const { transactions } = useTransactions();
 
   const summary = transactions.reduce((acc, transaction) => {
     if(transaction.type === 'deposit') {
@@ -21,7 +21,6 @@ export const Summary: React.FC = () => {
     }
 
     return acc;
-
   }, {
     deposits: 0,
     withdraws: 0,
@@ -56,7 +55,7 @@ export const Summary: React.FC = () => {
         </strong>
       </Card>
 
-      <Card className="highlight-background">
+      <Card className={summary.total < 0 ? 'highlight-background-red' : 'highlight-background-green'}>
         <header>
           <p>Total</p>
           <img src={totalImg} alt="Total" />

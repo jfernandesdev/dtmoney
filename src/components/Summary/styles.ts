@@ -27,7 +27,12 @@ export const Card = styled.div`
       line-height: 3rem;
     }
 
-    &.highlight-background {
+    &.highlight-background-red {
+      background: var(--red);
+      color: #FFF;
+    }
+
+     &.highlight-background-green {
       background: var(--green);
       color: #FFF;
     }
