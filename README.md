@@ -19,10 +19,17 @@ Projeto Web desenvolvido durante o Bootcamp Ignite by Rocketseat • Trilha Reac
 
 ## Layout (by @tiagoluchtenberg)🤩
 
-### Desktop (screenshot):
+### Desktop:
 
+|   |  |
+| --- | --- |
+| <img src="https://github.com/jfernandesdev/dtmoney/blob/06e5ef769b7389610a536602a5bda53e434c3900/public/layout/layout-desktop-1.png" /> | <img src="https://github.com/jfernandesdev/dtmoney/blob/06e5ef769b7389610a536602a5bda53e434c3900/public/layout/layout-desktop-2.png" /> |
 
 ### Mobile (screenshot):
+
+| |  |  |
+| --- | --- | --- |
+| <img src="https://github.com/jfernandesdev/dtmoney/blob/06e5ef769b7389610a536602a5bda53e434c3900/public/layout/layout-mobile-1.png" width='300px' /> | <img src="https://github.com/jfernandesdev/dtmoney/blob/06e5ef769b7389610a536602a5bda53e434c3900/public/layout/layout-mobile-1-2.png" width='300px' /> | <img src="https://github.com/jfernandesdev/dtmoney/blob/06e5ef769b7389610a536602a5bda53e434c3900/public/layout/layout-mobile-2.png" width='300px' /> |
 
 
 ### Dê uma olhada como o projeto ficou! 👀
