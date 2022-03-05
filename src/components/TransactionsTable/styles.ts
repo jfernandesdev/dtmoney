@@ -54,10 +54,7 @@ export const CardMobileWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0.5rem;
-
-    > span {
-      color: var(--text-body);
-    }
+    color: var(--text-body);
   }
 
   @media(min-width: 769px) {
